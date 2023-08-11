@@ -1,0 +1,11 @@
+/var/log/mariadb_access_attempts.log {
+    daily           # Rotate the log files every day
+    rotate 7        # Keep the last 7 rotated log files
+    compress        # Compress the rotated log files
+    missingok       # Don't error if the log file is missing
+    notifempty      # Don't rotate if the log file is empty
+    create 0640 root root # Set permissions and ownership for the new log files
+    postrotate      # Commands to run after rotation
+        systemctl reload rsyslog
+    endscript
+}
