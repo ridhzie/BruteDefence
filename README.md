@@ -10,6 +10,9 @@ The first script (`monitor_mariadb.sh`) was designed to continously monitor the 
 - Logging Attempts: Logs the IP address and the number of attempts to a specified log file.
 - Blocking IP: If an IP address attempts to connect more than 10 times in 30-minutes window, it is blocked using `iptables`.
 
+#### POC
+![POC](log_POC.png)
+
 ### 2. Log rotation configuration
 
 The second part of the solution involves setting up log rotation for the log file created by the monitoring script. This is done using the `logrotate`. The functionality are as follows:
