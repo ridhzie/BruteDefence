@@ -28,7 +28,7 @@ sudo journalctl -u mariadb -f |
   while IFS= read -r line; do
     if [[ $line == *"[Warning] Access denied for user"* ]]; then
       # Extract the IP
-      IP=$(echo $line | grep -oP "(?<=@)[0-9.]+")
+      IP=$(echo $line | rev | cut -d"'" -f2 | rev)
 
       # Log and block if necessary
       block_ip $IP
