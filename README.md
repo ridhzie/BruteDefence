@@ -46,6 +46,6 @@ The second part of the solution involves setting up log rotation for the log fil
 
 ### NOTES
 1. The script use `journalctl` to monitor the MariaDB status, so it requires root privileges.
-2. The script logs the IPs and attempts to the specified log file and blockes the IP using `iptables` if the attemps are greater than 10.
+2. The script logs the username and IPs and attempts to the specified log file and block the IP using `iptables` if the attempts are greater than the calculated threshold.
 
 Created and maintained by @ridhzie - https://github.com/ridhzie
