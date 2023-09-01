@@ -11,6 +11,7 @@ The first script (`monitor_mariadb.sh`) was designed to continously monitor the 
 - Logging Attempts: Logs the username and IP address and the number of attempts to a specified log file.
 - Blocking Threshold: Calculate the average attempts of the username and IP, and dynamically set the threshold to block the suspicious attempts.
 - Blocking IP: If the username and IP address surpassed the threshold, it is blocked using `iptables`.
+- Blocking username: If the username is not in the whitelist, it is blocked using `iptables'.
 
 ### POC
 
